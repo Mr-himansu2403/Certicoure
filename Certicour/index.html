@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CertiCour - Free Certification Courses & Learning Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#"><img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="CertiCour Logo">CertiCour</a>
+        </div>
+        <div class="nav-links">
+            <a href="#courses">Courses</a>
+            <a href="#internships">Internships</a>
+            <a href="#resources">Resources</a>
+            <a href="#about">About</a>
+        </div>
+        <div class="auth-buttons">
+            <button class="login-btn" onclick="showModal(loginModal)">Login</button>
+            <button class="register-btn" onclick="showModal(registerModal)">Register</button>
+        </div>
+        <button class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Learn, Grow, and Get Certified</h1>
+            <p>Access free certification courses, internships, and interview resources from top platforms</p>
+            <div class="search-box">
+                <input type="text" placeholder="Search for courses, internships, or resources...">
+                <button onclick="handleSearch()"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <i class="fas fa-users"></i>
+                    <span>2M+ Students</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>1000+ Courses</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-certificate"></i>
+                    <span>50+ Platforms</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section id="courses" class="featured-section">
+        <div class="section-header">
+            <h2>Featured Courses</h2>
+            <div class="platform-filters">
+                <button class="filter-btn active" data-platform="all">All Platforms</button>
+                <button class="filter-btn" data-platform="Coursera">Coursera</button>
+                <button class="filter-btn" data-platform="edX">edX</button>
+                <button class="filter-btn" data-platform="freeCodeCamp">freeCodeCamp</button>
+                <button class="filter-btn" data-platform="W3Schools">W3Schools</button>
+                <button class="filter-btn" data-platform="MongoDB">MongoDB</button>
+                <button class="filter-btn" data-platform="GitHub">GitHub</button>
+                <button class="filter-btn" data-platform="AWS">AWS</button>
+            </div>
+        </div>
+        <div id="courses-container" class="cards-container"></div>
+    </section>
+
+    <!-- Featured Internships -->
+    <section id="internships" class="featured-section">
+        <div class="section-header">
+            <h2>Featured Internships</h2>
+            <div class="internship-filters">
+                <button class="filter-btn active" data-duration="all">All Durations</button>
+                <button class="filter-btn" data-duration="3 months">3 Months</button>
+                <button class="filter-btn" data-duration="4 months">4 Months</button>
+                <button class="filter-btn" data-duration="6 months">6 Months</button>
+            </div>
+        </div>
+        <div id="internships-container" class="cards-container"></div>
+    </section>
+
+    <!-- Interview Resources -->
+    <section id="resources" class="featured-section">
+        <div class="section-header">
+            <h2>Interview Resources</h2>
+            <div class="resource-filters">
+                <button class="filter-btn active" data-difficulty="all">All Levels</button>
+                <button class="filter-btn" data-difficulty="easy">Easy</button>
+                <button class="filter-btn" data-difficulty="medium">Medium</button>
+                <button class="filter-btn" data-difficulty="hard">Hard</button>
+            </div>
+        </div>
+        <div id="resources-container" class="cards-container"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>About CertiCour</h2>
+            <p>CertiCour is your gateway to free certification courses and learning resources from top platforms worldwide. We curate the best free courses, internships, and interview preparation materials to help you advance your career.</p>
+            <div class="about-stats">
+                <div class="stat">
+                    <i class="fas fa-book"></i>
+                    <h3>1000+</h3>
+                    <p>Free Courses</p>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-users"></i>
+                    <h3>2M+</h3>
+                    <p>Active Students</p>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-certificate"></i>
+                    <h3>50+</h3>
+                    <p>Learning Platforms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>CertiCour provides free access to certification courses and learning resources from top platforms worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#internships">Internships</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: contact@certicour.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CertiCour. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required placeholder="Enter your password">
+                </div>
+                <button type="submit">Login</button>
+                <p class="form-footer">Don't have an account? <a href="#" onclick="showRegisterModal()">Register</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Register</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required placeholder="Enter your password">
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">Confirm Password</label>
+                    <input type="password" id="register-confirm-password" required placeholder="Confirm your password">
+                </div>
+                <button type="submit">Register</button>
+                <p class="form-footer">Already have an account? <a href="#" onclick="showLoginModal()">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
